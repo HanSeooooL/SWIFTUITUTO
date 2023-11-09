@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ScrumsView: View {   //View 구조체(객체) 생성
-    let scrums: [DailyScrum]
+    @Binding var scrums: [DailyScrum]
     var body: some View {
         NavigationStack {
-            List(scrums) { scrum in
-                NavigationLink(destination: Text(scrum.title)) {
+            List($scrums) { $scrum in
+                NavigationLink(destination: DetailView(scrum: $scrum)) {
                     CardView(scrum: scrum)
                 }
-                .listRowBackground(scrum.theme.mainColor)
+                .listRowBackground(scrum.Theme.mainColor)
             }
             .navigationTitle("Daily Scrum")
             .toolbar {
@@ -30,6 +30,6 @@ struct ScrumsView: View {   //View 구조체(객체) 생성
 
 struct ScrumsView_previews: PreviewProvider {   //미리보기 실행 객체
     static var previews: some View {
-        ScrumsView(scrums: DailyScrum.sampleData)
+        ScrumsView(scrums: .constant(DailyScrum.sampleData))
     }
 }

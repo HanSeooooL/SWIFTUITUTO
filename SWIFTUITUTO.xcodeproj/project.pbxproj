@@ -17,6 +17,10 @@
 		A418F7372AFC829900BFDB34 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A418F7362AFC829900BFDB34 /* CardView.swift */; };
 		A418F7392AFC871A00BFDB34 /* TrailingIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A418F7382AFC871A00BFDB34 /* TrailingIconLabelStyle.swift */; };
 		A418F73B2AFC890A00BFDB34 /* ScrumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A418F73A2AFC890A00BFDB34 /* ScrumsView.swift */; };
+		A45064742AFCB077007090D9 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45064732AFCB077007090D9 /* DetailView.swift */; };
+		A45064762AFCB494007090D9 /* DetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45064752AFCB494007090D9 /* DetailEditView.swift */; };
+		A45064782AFCB8F8007090D9 /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45064772AFCB8F8007090D9 /* ThemeView.swift */; };
+		A450647A2AFCBB75007090D9 /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45064792AFCBB75007090D9 /* ThemePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		A418F7362AFC829900BFDB34 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		A418F7382AFC871A00BFDB34 /* TrailingIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingIconLabelStyle.swift; sourceTree = "<group>"; };
 		A418F73A2AFC890A00BFDB34 /* ScrumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumsView.swift; sourceTree = "<group>"; };
+		A45064732AFCB077007090D9 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		A45064752AFCB494007090D9 /* DetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditView.swift; sourceTree = "<group>"; };
+		A45064772AFCB8F8007090D9 /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
+		A45064792AFCBB75007090D9 /* ThemePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +74,9 @@
 				A418F72D2AFC7BF100BFDB34 /* Models */,
 				A418F71B2AFC733100BFDB34 /* SWIFTUITUTOApp.swift */,
 				A418F71D2AFC733100BFDB34 /* ContentView.swift */,
+				A418F72B2AFC73A100BFDB34 /* MeetingView.swift */,
 				A418F71F2AFC733400BFDB34 /* Assets.xcassets */,
 				A418F7212AFC733400BFDB34 /* Preview Content */,
-				A418F72B2AFC73A100BFDB34 /* MeetingView.swift */,
 			);
 			path = SWIFTUITUTO;
 			sourceTree = "<group>";
@@ -86,8 +94,12 @@
 			children = (
 				A418F7322AFC7CF800BFDB34 /* Theme.swift */,
 				A418F7342AFC7E0500BFDB34 /* DailyScrum.swift */,
+				A45064752AFCB494007090D9 /* DetailEditView.swift */,
 				A418F7362AFC829900BFDB34 /* CardView.swift */,
 				A418F73A2AFC890A00BFDB34 /* ScrumsView.swift */,
+				A45064792AFCBB75007090D9 /* ThemePicker.swift */,
+				A45064732AFCB077007090D9 /* DetailView.swift */,
+				A45064772AFCB8F8007090D9 /* ThemeView.swift */,
 				A418F7382AFC871A00BFDB34 /* TrailingIconLabelStyle.swift */,
 			);
 			path = Models;
@@ -164,11 +176,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A418F7352AFC7E0500BFDB34 /* DailyScrum.swift in Sources */,
+				A45064782AFCB8F8007090D9 /* ThemeView.swift in Sources */,
+				A45064742AFCB077007090D9 /* DetailView.swift in Sources */,
 				A418F71E2AFC733100BFDB34 /* ContentView.swift in Sources */,
 				A418F7332AFC7CF800BFDB34 /* Theme.swift in Sources */,
 				A418F73B2AFC890A00BFDB34 /* ScrumsView.swift in Sources */,
 				A418F71C2AFC733100BFDB34 /* SWIFTUITUTOApp.swift in Sources */,
 				A418F7372AFC829900BFDB34 /* CardView.swift in Sources */,
+				A45064762AFCB494007090D9 /* DetailEditView.swift in Sources */,
+				A450647A2AFCBB75007090D9 /* ThemePicker.swift in Sources */,
 				A418F72C2AFC73A100BFDB34 /* MeetingView.swift in Sources */,
 				A418F7392AFC871A00BFDB34 /* TrailingIconLabelStyle.swift in Sources */,
 			);
@@ -306,6 +322,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,6 +351,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

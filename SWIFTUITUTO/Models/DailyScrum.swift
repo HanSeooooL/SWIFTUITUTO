@@ -10,16 +10,40 @@ import Foundation
 struct DailyScrum : Identifiable { //구조체 선언
     let id: UUID
     var title: String   //변수 선언 var:변수 (let: 상수) 변수(상수명): 변수 타입(지정하지 않고 바로 초기화하면 자동 적용)
-    var attendees: [String]
+    var attendees: [Attendee]
     var lengthInminute: Int
-    var theme: theme
+    var lengthInMinutesAsDouble: Double {
+        get {
+            Double(lengthInminute)
+        }
+        set {
+            lengthInminute = Int(newValue)
+        }
+    }
+    var Theme: Theme
     
-    init(id: UUID = UUID(), title: String, attendees: [String], lengthInminute: Int, theme: theme) {
+    init(id: UUID = UUID(), title: String, attendees: [String], lengthInminute: Int, theme: Theme) {
         self.id = id
         self.title = title
-        self.attendees = attendees
+        self.attendees = attendees.map { Attendee(name: $0) }   //map을 통해 리스트 내 각 배열에 대해 중괄호 내 각각 연산
         self.lengthInminute = lengthInminute
-        self.theme = theme
+        self.Theme = theme
+    }
+}
+
+extension DailyScrum {
+    struct Attendee: Identifiable {
+        let id: UUID
+        var name: String
+        
+        init(id: UUID = UUID(), name: String) {
+            self.id = id
+            self.name = name
+        }
+    }
+    
+    static var emptyScrum: DailyScrum {
+        DailyScrum(title: "", attendees: [], lengthInminute: 5, theme: .sky)
     }
 }
 
